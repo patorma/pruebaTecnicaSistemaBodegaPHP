@@ -4,11 +4,18 @@
    
    $d = new Datos();
 
-   $datos = $d->getDatos("SELECT  (b.id_bodega) as id,(b.codigo_bodega) as codigo, (b.nombre_bodega) as bodega,
-         (b.direccion_bodega) as direccion, (b.dotacion)as dotacion, 
-		 CONCAT_WS(' ', e.nombre, e.primer_apellido, e.segundo_apellido) AS encargado,
-		 (b.fecha_creacion) as fecha_registro, (b.estado) as estado
-FROM encargados e INNER JOIN bodegas b ON (e.bodega_id = b.id_bodega);");
+   $datos = $d->getDatos("SELECT 
+    b.codigo_bodega,
+    b.nombre_bodega,
+    b.direccion_bodega,
+    b.dotacion,
+    CONCAT(e.nombre, ' ', e.primer_apellido, ' ', e.segundo_apellido) AS encargado,
+    b.fecha_creacion,
+    b.estado
+FROM bodegas b
+INNER JOIN bodega_encargado be ON b.id_bodega = be.bodega_id
+INNER JOIN encargados e ON be.encargado_id = e.id_encargado
+ORDER BY b.fecha_creacion DESC;");
  //print_r($datos);
 ?>
 
@@ -33,7 +40,7 @@ FROM encargados e INNER JOIN bodegas b ON (e.bodega_id = b.id_bodega);");
                 <table>
                     <thead>
                         <tr>
-                            <th>Id</th>
+                           
                             <th>Código</th>
                             <th>Bodega</th>
                             <th>Dirección</th>
@@ -49,13 +56,13 @@ FROM encargados e INNER JOIN bodegas b ON (e.bodega_id = b.id_bodega);");
                             foreach( $datos as $dato){
                         ?> 
                         <tr>
-                             <td><?php echo $dato['id'] ?></td>
-                             <td><?php echo $dato['codigo'] ?></td>
-                             <td><?php echo $dato['bodega'] ?></td>
-                             <td><?php echo $dato['direccion'] ?></td>
+                             
+                             <td><?php echo $dato['codigo_bodega'] ?></td>
+                             <td><?php echo $dato['nombre_bodega'] ?></td>
+                             <td><?php echo $dato['direccion_bodega'] ?></td>
                              <td><?php echo $dato['dotacion'] ?></td>
                              <td><?php echo $dato['encargado'] ?></td>
-                             <td><?php echo $dato['fecha_registro'] ?></td>
+                             <td><?php echo $dato['fecha_creacion'] ?></td>
                              <td><?php echo $dato['estado'] ?></td>
                              <td>
                                 <a href="" class="editar">Editar</a>
