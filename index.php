@@ -98,7 +98,9 @@ $datos = $d->getDatos($sql);
                              <td><?php echo $dato['fecha_creacion'] ?></td>
                              <td><?php echo $dato['estado'] ?></td>
                              <td>
-                                <a href="/editarBodega.php" class="editar" data-id="<?=$dato['id_bodega'] ?>">Editar</a>
+                             <a href="editarBodega.php?id=<?=$dato  ['id_bodega']?>" class="editar">
+                                Editar
+                                </a>
                                 <a href="#" class="eliminar" data-id="<?=$dato['id_bodega']?>">Eliminar</a>
                           
                              </td>
