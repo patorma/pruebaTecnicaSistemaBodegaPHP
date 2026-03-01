@@ -35,7 +35,7 @@ $encargados = $pdo->query("SELECT * FROM encargados")->fetchAll(PDO::FETCH_ASSOC
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Datos de bodega</title>
 </head>
 <body>
    <form method="POST" action="actualizar_bodega.php">
@@ -59,12 +59,12 @@ $encargados = $pdo->query("SELECT * FROM encargados")->fetchAll(PDO::FETCH_ASSOC
 
 <label>Estado</label>
 <select name="estado">
-    <option value="Activada" 
+    <option value="activada" 
         <?=$bodega['estado']=='Activada'?'selected':''?>>
         Activada
     </option>
-    <option value="Desactivada"
-        <?=$bodega['estado']=='Desactivada'?'selected':''?>>
+    <option value="desactivada"
+        <?=$bodega['estado']=='desactivada'?'selected':''?>>
         Desactivada
     </option>
 </select>
