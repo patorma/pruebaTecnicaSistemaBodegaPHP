@@ -17,7 +17,7 @@ abstract class Conectar{
         $this->conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         
     } catch (PDOException $e) {
-        die("Error en la conexión: ". $e);
+        die("Error en la conexión: ". $e->getMessage());
     }
 
     return $this->conexion;

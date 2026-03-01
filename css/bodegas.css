@@ -1,33 +1,76 @@
 table, td, th {
   border: 1px solid;
   padding: 10px;
+  margin:auto;
  
+}
+.titulo-filtro{
+  font-size: 25px;
+}
+.crear{
+   background-color: green;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border-radius: 50px;
+}
+.filtrar{
+    background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border-radius: 50px;
+}
+.select{
+  
+  &, &::picker(select) {
+    appearance: base-select;    
+  }  
+  
 }
 
 table {
   border-collapse: collapse;
 }
+
 .editar{
 background-color: #17a589;
 color: #fff;
+text-align: center;
  font-weight: bold;
  font-size: 1rem;
-  padding: 12px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  border-radius: 50px;
+  text-decoration: none;
+  
 
 }
 .eliminar  {
-   background-color: #17a589;
+   background-color: red;
    color: #fff;
     font-weight: bold;
     font-size: 1rem;
-  padding: 12px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
+border-radius: 50px;
+text-align: center;
+text-decoration: none;
     /* grid-column: span 2; 
   background-color: #17a589;
   color: #fff;
@@ -39,4 +82,6 @@ color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease; */
 }
+
+
 

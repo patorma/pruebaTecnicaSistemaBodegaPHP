@@ -1,11 +1,3 @@
-<?php 
-require ('config/conectar.php');
-require ('config/datos.php');
-
-$d = new Datos();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +6,6 @@ $d = new Datos();
     <title>Document</title>
 </head>
 <body>
-    
+    hola
 </body>
 </html>
