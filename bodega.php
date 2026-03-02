@@ -16,9 +16,13 @@ $encargados = $pdo->query("SELECT * FROM encargados")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Bodega</title>
+    <link rel="stylesheet" href="css/registroBodega.css">
 </head>
 
 <body>
+      <div class="h1">
+      <h1 class="titulo1">Registro de una Bodega</h1>
+    </div>
     <form id="formBodega" class="insert" action="" method="post">
          <div id="resultado" class="resultado "></div>
         <label for="codigo_bodega" class="form-label">Código</label>
