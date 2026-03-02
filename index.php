@@ -52,7 +52,7 @@ $datos = $d->getDatos($sql);
             </div>
             <div>
                 <p>
-                    <a href="/bodega.php" class="crear">Crear Bodega</a>
+                    <a href="bodega.php" class="crear">Crear Bodega</a>
                 </p>
 
                 <form method="GET">

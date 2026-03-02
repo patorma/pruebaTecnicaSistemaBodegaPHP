@@ -29,6 +29,7 @@ $encSeleccionados = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
 // Obtener todos los encargados
 $encargados = $pdo->query("SELECT * FROM encargados")->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +44,7 @@ $encargados = $pdo->query("SELECT * FROM encargados")->fetchAll(PDO::FETCH_ASSOC
 <input type="hidden" name="id_bodega" value="<?=$bodega['id_bodega']?>">
 
 <label>Código</label>
-<input type="text" value="<?=$bodega['codigo_bodega']?>" disabled>
+<input type="text" value="<?=$bodega['codigo_bodega']?>" disabled >
 
 <label>Nombre</label>
 <input type="text" name="nombre_bodega" 

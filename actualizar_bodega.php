@@ -9,6 +9,7 @@ $d = new Datos();
 $pdo = $d->conectar();
 
 $id = $_POST['id_bodega'] ?? null;
+$codigo_bodega = $_POST['codigo_bodega'];
 $nombre = trim($_POST['nombre_bodega'] ?? '');
 $direccion = trim($_POST['direccion_bodega'] ?? '');
 $dotacion = $_POST['dotacion'] ?? null;
@@ -17,10 +18,15 @@ $encargados = $_POST['encargados'] ?? [];
 // echo "<pre>";
 // var_dump($_POST);
 // exit;
-// VALIDACIONES
+// Validaciones de los campos
 
 if(!$id || !is_numeric($id)){
     die("ID inválido");
+}
+
+if(strlen($codigo_bodega) > 5){
+     echo "<span style='color:red;'>Código inválido debe ser de 5 caracteres</span>";
+        exit;
 }
 
 if($nombre == '' || strlen($nombre) > 100){
