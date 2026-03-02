@@ -16,6 +16,11 @@ Este sistema permite listar y editar los datos de una bodega los cuales son:
 
 La entidad encargado estara ya ingresada en la bd sin crear una interfaz para ingresar sus datos.
 
+Por el requisito de que una bodega puede estar asociada a uno o más encargados se creo la entidad intermedia entre
+bodegas y encargados bodega_encargado para asociar una bodega a uno o más encargados. Revisar el código en la parte de
+editar, agregar y eliminar bodega donde se explica por ejemplo : para eliminar una bodega se rompe primero la asociacion con un encargado
+en la tabla bodega_encargado y despues se elimina una bodega.
+
 ---
 
 ##  Tecnologías utilizadas
