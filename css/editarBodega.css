@@ -53,33 +53,3 @@ body {
   border-color: #3498db;
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
-
-
-.insert select {
-  height: 100px;
-}
-
-
-.insert button {
-  margin-top: 25px;
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  background-color: #3498db;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.insert button:hover {
-  background-color: #2980b9;
-}
-
-
-.resultado {
-  margin-bottom: 10px;
-  font-size: 14px;
-  text-align: center;
-}

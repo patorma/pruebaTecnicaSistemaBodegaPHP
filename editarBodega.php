@@ -37,9 +37,11 @@ $encargados = $pdo->query("SELECT * FROM encargados")->fetchAll(PDO::FETCH_ASSOC
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos de bodega</title>
+    <link rel="stylesheet" href="css/editarBodega.css">
 </head>
 <body>
-   <form method="POST" action="actualizar_bodega.php">
+    <h1 class="titulo1">Editar una Bodega</h1>
+   <form method="POST" action="actualizar_bodega.php" class="insert" >
 
 <input type="hidden" name="id_bodega" value="<?=$bodega['id_bodega']?>">
 
