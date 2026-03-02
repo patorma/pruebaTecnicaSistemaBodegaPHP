@@ -6,11 +6,12 @@ $('#formBodega').on('submit',function(e){
      //trim() para eliminar espacios en blanco al inicio y al final
      const codigo = $('#codigo').val().trim();
      const nombre_bodega = $('#nombre_bodega').val().trim();
+     const direccion_bodega = $('#direccion_bodega').val().trim();
      const dotacion = $('#dotacion').val().trim();
      const encargados = $('#encargado_id').val();
 
 
-     if(codigo === ''|| nombre_bodega === '' || dotacion === ''){
+     if(codigo === ''|| nombre_bodega === '' || dotacion === '' || direccion_bodega === ''){
         alert('Todos los campos son obligatorios.');
         hasError = true;
      }else if (codigo.length < 2 || codigo.length  >5){

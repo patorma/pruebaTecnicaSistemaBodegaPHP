@@ -31,6 +31,9 @@ $encargados = $pdo->query("SELECT * FROM encargados")
         <label for="nombre_bodega" class="form-label-nombre">Nombre</label>
         <input type="text" name="nombre_bodega" class="nombre_bodega" id="nombre_bodega" maxlength="100">
        
+        <label for="direccion_bodega" class="form-label-nombre">Dirección</label>
+        <input type="text" name="direccion_bodega" class="direccion_bodega" id="direccion_bodega" maxlength="100" required>
+       
         <label for="dotacion" class="form-label-nombre">Dotación</label>
         <input type="number" name="dotacion" class="dotacion" id="dotacion" maxlength="50" required>
        

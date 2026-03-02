@@ -1,15 +1,85 @@
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f8f9fa;
+  background-color: #f4f6f9;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   padding: 40px;
-  font-size: 16px;
+  margin: 0;
 }
 
-.h1 .titulo1{
-    text-align: center;
-    
+/* Título */
+.titulo1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Contenedor del formulario */
+.insert {
+  background-color: #ffffff;
+  width: 420px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.insert label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+/* Inputs */
+.insert input,
+.insert select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Efecto focus */
+.insert input:focus,
+.insert select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Select multiple */
+.insert select {
+  height: 100px;
+}
+
+/* Botón */
+.insert button {
+  margin-top: 25px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.insert button:hover {
+  background-color: #2980b9;
+}
+
+/* Mensajes */
+.resultado {
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
 }
