@@ -19,10 +19,7 @@ $('#formBodega').on('submit',function(e){
      }   else if (parseInt(dotacion) <= 0){
         alert('La dotación debe ser mayor a 0.');
         hasError = true;
-    // }  else if(!encargados ){
-    //     alert('Debe seleccionar al menos un encargado.');
-    //     hasError = true;
-    // }
+    } 
      if (hasError) return; // si hay error se detiene
 
      $.ajax({
