@@ -24,20 +24,23 @@ try {
         throw new Exception("Datos inválidos.");
     }
 
-    // 1️⃣ Insertar bodega
+    // Primero se inserta en bodega
     $sql = "INSERT INTO bodegas 
             (codigo_bodega, nombre_bodega, direccion_bodega, dotacion)
             VALUES (?,?,?,?)";
 
     $params = [$codigo, $nombre, $direccion, $dotacion];
 
-    // Aquí obtenemos el ID recién creado
+    // Luego se obtiene el id del  último registro insertado
     $idBodega = $d->setDato($sql, $params);
 
-    // 2️⃣ Insertar en tabla intermedia
+    // con el id del encargado más el id de la bodega id obtenida
+    //en la linea de código anterior se inserta esos datos en la tabla
+    //intermedia de bodega_encrgado
     $sql2 = "INSERT INTO bodega_encargado (bodega_id, encargado_id)
              VALUES (?,?)";
-
+//se recorre el arreglo de los encargados  para insertar los parametros en php
+//que vienen del formulario
     foreach($encargados as $idEncargado){
         $d->setDato($sql2, [$idBodega, $idEncargado]);
     }

@@ -48,7 +48,7 @@ $encargados = $pdo->query("SELECT * FROM encargados")
 
         </select>
        <button type="submit">Guardar</button>
-    </form>
+    </form><!--libreria jquery para el tema de manejo del dom-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/validar.js"></script>
 </body>

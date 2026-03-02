@@ -33,6 +33,7 @@ public function setDato($sql, $params = [])
     $datos = $this->bd->prepare($sql);
     $datos->execute($params);
 
+    //con lastInsertId  se obtiene el id del ultimo registro insertado
     return $this->bd->lastInsertId(); 
 }
 }

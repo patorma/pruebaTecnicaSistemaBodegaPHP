@@ -19,7 +19,7 @@ try {
     $d = new Datos();
     $pdo = $d->conectar();   
 
-    // Verificar si existe
+    // Verificar si existe en la bd 
     $stmt = $pdo->prepare("SELECT id_bodega FROM bodegas WHERE id_bodega = ?");
     $stmt->execute([$id]);
 

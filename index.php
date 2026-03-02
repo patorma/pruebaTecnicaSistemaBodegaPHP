@@ -31,6 +31,9 @@ $filtro
 ORDER BY b.fecha_creacion DESC";
 
 $datos = $d->getDatos($sql);
+//$filtro es la bandera para mostrar en el select de filtrar
+// ambos, activada o desactivada lo que representa los valores
+// del estado de la bodega  
  //print_r($datos);
     // $filtroEstado = $d->getDatos("SELECT ");
     //  print_r($filtroEstado);

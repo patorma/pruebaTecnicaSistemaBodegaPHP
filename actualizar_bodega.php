@@ -2,8 +2,8 @@
 
 require('config/conectar.php');
 require('config/datos.php');
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
 $d = new Datos();
 $pdo = $d->conectar();
@@ -67,7 +67,7 @@ try{
     $stmt = $pdo->prepare("DELETE FROM bodega_encargado WHERE bodega_id=?");
     $stmt->execute([$id]);
 
-    // insertar nuevas
+    // insertar nuevas relaciones con encargado
     $stmt = $pdo->prepare("INSERT INTO bodega_encargado (bodega_id, encargado_id) VALUES (?,?)");
 
     foreach($encargados as $enc){
