@@ -7,7 +7,7 @@ $('#formBodega').on('submit',function(e){
      const codigo = $('#codigo').val().trim();
      const nombre_bodega = $('#nombre_bodega').val().trim();
      const dotacion = $('#dotacion').val().trim();
-     const encargados = $('#encargados').val();
+     const encargados = $('#encargado_id').val();
 
 
      if(codigo === ''|| nombre_bodega === '' || dotacion === ''){
@@ -36,6 +36,7 @@ $('#formBodega').on('submit',function(e){
                     url: 'insertarBodega.php',
                     method: 'POST',
                     data:$('#formBodega').serialize(),
+                    dataType: 'json',
                     success: function (response) {
                     $('#resultado').html(response);
                     $('#formBodega')[0].reset();

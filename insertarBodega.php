@@ -1,7 +1,7 @@
 <?php
 
-require ('../config/conectar.php');
-require ('../config/datos.php');
+require ('config/conectar.php');
+require ('config/datos.php');
 
 header("Content-Type: application/json");
 
