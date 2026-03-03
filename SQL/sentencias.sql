@@ -135,8 +135,9 @@ SELECT
 FROM bodegas b
 INNER JOIN bodega_encargado be ON b.id_bodega = be.bodega_id
 INNER JOIN encargados e ON be.encargado_id = e.id_encargado
-WHRE b.estado =''
+WHERE b.estado ='activada'
 ORDER BY b.fecha_creacion DESC;
+
 		 select * from  encargados;
 
 
